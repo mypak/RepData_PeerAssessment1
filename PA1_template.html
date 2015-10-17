@@ -67,7 +67,13 @@ img {
 
 
 <p>Reproducible Research</p>
-<p>**1) Loading and processing the data - Load the data (i.e. read.csv()) - Process/transform the data (if necessary) into a format suitable for your analysis</p>
+<ol style="list-style-type: decimal">
+<li>Loading and processing the data</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Load the data (i.e. read.csv())</li>
+<li>Process/transform the data (if necessary) into a format suitable for your analysis</li>
+</ol>
 <pre class="r"><code>if(!file.exists(&quot;activity.csv&quot;)){
   unzip (&quot;activity.zip&quot;)
 }
@@ -93,7 +99,14 @@ head(activitydata)</code></pre>
 ##  3rd Qu.: 12.00   3rd Qu.:2012-11-15   3rd Qu.:1766.2  
 ##  Max.   :806.00   Max.   :2012-11-30   Max.   :2355.0  
 ##  NA's   :2304</code></pre>
-<p>**2) What is mean total number of steps taken per day? - Calculate the total number of steps taken per day - Make a histogram of the total number of steps taken each day - Calculate and report the mean and median of the total number of steps taken per day</p>
+<ol start="2" style="list-style-type: decimal">
+<li>What is mean total number of steps taken per day?</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the total number of steps taken per day</li>
+<li>Make a histogram of the total number of steps taken each day</li>
+<li>Calculate and report the mean and median of the total number of steps taken per day</li>
+</ol>
 <pre class="r"><code>library(ggplot2)</code></pre>
 <pre><code>## Warning: package 'ggplot2' was built under R version 3.2.2</code></pre>
 <pre class="r"><code>q &lt;- qplot(date, weight = activitydata$steps, data = activitydata, geom = &quot;histogram&quot;,binwidth=1)
